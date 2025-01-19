@@ -74,12 +74,19 @@ const Login = ({ history }) => {
                         <Link to="/password/forgot" className="float-right mb-4">Forgot Password?</Link>
             
                         <button
-                        id="login_button"
-                        type="submit"
-                        className="btn btn-block py-3"
+                            id="login_button"
+                            type="submit"
+                            className="btn btn-block py-3"
+                            style={{
+                                backgroundColor: '#e11b22', // Red color matching the header
+                                color: '#fff', // White text for contrast
+                                border: 'none', // Removes default borders
+                                fontWeight: 'bold', // Bold text to stand out
+                            }}
                         >
-                        LOGIN
+                            LOGIN
                         </button>
+
 
                         <Link to="/register" className="float-right mt-3">New User?</Link>
                     </form>

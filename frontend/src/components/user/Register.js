@@ -147,14 +147,21 @@ export const Register = ({ history }) => {
                 </div>
             </div>
     
-                <button
+            <button
                 id="register_button"
                 type="submit"
                 className="btn btn-block py-3"
-                disabled={ loading ? true : false}
-                >
+                style={{
+                    backgroundColor: '#e11b22', // Red color matching the header
+                    color: '#fff', // White text for contrast
+                    border: 'none', // Removes default borders
+                    fontWeight: 'bold', // Bold text to stand out
+                }}
+                disabled={loading ? true : false}
+            >
                 REGISTER
-                        </button>
+            </button>
+
                     </form>
                 </div>
             </div>
