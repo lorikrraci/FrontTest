@@ -1,0 +1,16 @@
+.home-background {
+        background: url('/public/images/background.png') no-repeat center center;
+        background-size: cover; /* Ensures the image covers the entire area */
+        height: 100vh; /* Full height of the viewport */
+        width: 100%; /* Full width of the viewport */
+        position: fixed; /* Ensures it stays in place */
+        top: 0;
+        left: 0;
+        z-index: -1; /* Places it behind all other content */
+    }
+    
+    .home-container {
+        position: relative; /* Ensures other content is positioned correctly on top */
+        z-index: 1; /* Places content above the background image */
+    }
+    
