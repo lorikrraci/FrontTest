@@ -10,7 +10,6 @@ import Login from './components/user/Login'
 import { Register } from './components/user/Register';
 import './App.css';
 
-
 function App() {
   return (
     <Router>
