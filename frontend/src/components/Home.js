@@ -64,7 +64,7 @@ const Home = () => {
                         <Fragment>
                             <MetaData title={'Kb Vellaznimi'} />
 
-                            <h1 id="products_heading">Latest Products</h1>
+                            <h1 id="products_heading">KB Vellaznimi</h1>
 
                             <section id="products" className="container mt-5">
                                 <div className="row">

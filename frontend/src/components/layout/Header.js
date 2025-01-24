@@ -23,7 +23,7 @@ export const Header = () => {
                     Kryefaqja
                 </Link>
                 <Link 
-                    to="/store" 
+                    to="/aboutUs" 
                     style={{ color: '#fff', fontWeight: 'bold', textDecoration: 'none' }}
                 >
                     Klubi
@@ -35,7 +35,7 @@ export const Header = () => {
                     Dyqani
                 </Link>
                 <Link 
-                    to="/tickets" 
+                    to="/store" 
                     style={{ color: '#fff', fontWeight: 'bold', textDecoration: 'none' }}
                 >
                     Rezultatet
