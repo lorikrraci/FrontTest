@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import Slider from 'rc-slider';
 
 import 'rc-slider/assets/index.css';
-// import './Home.css'; // Import the CSS file
+import './Store.css'; // Import the CSS file
 
 import MetaData from '../layout/MetaData';
 import Product from '../product/Product';
@@ -13,7 +13,7 @@ import { getProducts } from '../../actions/productActions';
 import ReactPaginate from 'react-paginate';
 import { useParams } from 'react-router-dom';
 
-const Home = () => {
+const Store = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [price, setPrice] = useState([1, 5000]);
     const [category, setCategory] = useState('');
@@ -55,8 +55,8 @@ const Home = () => {
     }
 
     return (
-        <div className="home-background">
-            <div className="home-container">
+        <div className="store-background">
+            <div className="store-container">
                 <Fragment>
                     {loading ? (
                         <Loader />
@@ -200,4 +200,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Store;
