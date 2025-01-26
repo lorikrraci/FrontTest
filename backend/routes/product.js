@@ -2,22 +2,30 @@ const express = require('express');
 const router = express.Router();
 
 const { 
-    newOrder, 
-    getSingleOrder, 
-    getOrders,     
-    updateOrderStatus, 
-    deleteOrder
-} = require('../controllers/orderController');
+    getProducts, // Renamed from getProducts
+    createProduct,  // Renamed from newProduct
+    getProductById, // Renamed from getSingleProduct
+    updateProduct,
+    deleteProduct,
+    // Add review-related controllers if they exist
+} = require('../controllers/productController'); // Ensure this path is correct
 
 const { isAuthenticatedUser, authorizeRoles } = require('../middlewares/auth');
 
-router.route('/order/new').post(isAuthenticatedUser, newOrder);
+// Define your routes here
+router.route('/').get(getProducts); 
+router.route('/:id').get(getProductById);
 
-router.route('/order/me').get(isAuthenticatedUser, getOrders); // Adjust if it fetches orders by user
-router.route('/order/:id').get(isAuthenticatedUser, getSingleOrder);
+// Admin Routes
+router.route('/admin/products/new').post(isAuthenticatedUser, authorizeRoles('admin'), createProduct);
+router.route('/admin/products/:id')
+    .put(isAuthenticatedUser, authorizeRoles('admin'), updateProduct)
+    .delete(isAuthenticatedUser, authorizeRoles('admin'), deleteProduct);
 
-router.route('/admin/order').get(isAuthenticatedUser, authorizeRoles('admin'), getOrders); // Adjust if needed
-router.route('/admin/order/:id')
-    .put(isAuthenticatedUser, authorizeRoles('admin'), updateOrderStatus)
-    .delete(isAuthenticatedUser, authorizeRoles('admin'), deleteOrder);
+// // Review Routes
+// router.route('/reviews').put(isAuthenticatedUser, createProductReview);
+// router.route('/reviews')
+//     .get(isAuthenticatedUser, getProductReviews)
+//     .delete(isAuthenticatedUser, deleteReview);
+
 module.exports = router;
