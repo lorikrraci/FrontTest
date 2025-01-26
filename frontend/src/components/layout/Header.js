@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Search from './Search';
 
 export const Header = () => {
     return (
@@ -13,6 +14,10 @@ export const Header = () => {
                 />
                 <h1 style={{ color: '#fff', fontSize: '20px', fontWeight: 'bold', margin: '0' }}>KB VËLLAZNIMI</h1>
             </div>
+
+            <div className="col-12 col-md-6 mt-2 mt-md-0">
+                    <Search />
+                </div>
 
             {/* Right Section: Navigation Links */}
             <nav style={{ display: 'flex', gap: '20px' }}>
