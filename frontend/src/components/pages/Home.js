@@ -4,12 +4,12 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 // import './Home.css'; // Import the CSS file
 
-import MetaData from './layout/MetaData';
-import Product from './product/Product';
-import Loader from './layout/Loader';
+import MetaData from '../layout/MetaData';
+import Product from '../product/Product';
+import Loader from '../layout/Loader';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { getProducts } from '../actions/productActions';
+import { getProducts } from '../../actions/productActions';
 import ReactPaginate from 'react-paginate';
 import { useParams } from 'react-router-dom';
 

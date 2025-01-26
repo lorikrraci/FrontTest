@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 
-import Home from './components/Home';
+import Home from './components/pages/Home';
 import ProductDetails from './components/product/ProductDetails';
+import Store from './components/pages/Store';
 
 import Login from './components/user/Login'
 import { Register } from './components/user/Register';
@@ -20,7 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/search/:keyword" element={<Home />} />
             <Route path="/product/:id" element={<ProductDetails />} />
-
+            <Route path="/store" element={<Store />} />
             <Route path="/login" element={<Login />}/>
             <Route path="/register" element={<Register />}/>
           </Routes>

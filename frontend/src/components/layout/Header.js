@@ -40,13 +40,13 @@ export const Header = () => {
                     Dyqani
                 </Link>
                 <Link 
-                    to="/store" 
+                    to="/stats" 
                     style={{ color: '#fff', fontWeight: 'bold', textDecoration: 'none' }}
                 >
                     Rezultatet
                 </Link>
                 <Link 
-                    to="/tickets" 
+                    to="/news" 
                     style={{ color: '#fff', fontWeight: 'bold', textDecoration: 'none' }}
                 >
                     Lajmet
