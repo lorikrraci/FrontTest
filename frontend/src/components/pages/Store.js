@@ -64,7 +64,7 @@ const Store = () => {
                         <Fragment>
                             <MetaData title={'KB Vellaznimi'} />
 
-                            <h1 id="products_heading">KB Vellaznimi</h1>
+                            <h1 id="products_heading">KB Vellaznimi Store</h1>
 
                             <section id="products" className="container mt-5">
                                 <div className="row">
