@@ -7,8 +7,9 @@ html, body {
 }
 
 .home-background {
-    height: 100vh;
+    height: 150vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -20,8 +21,10 @@ html, body {
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-left: 50px;
+    box-sizing: border-box;
 }
 
 .background-text {
@@ -58,3 +61,64 @@ html, body {
     color: #0056b3;
   }
     
+  .results-container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.results-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.results-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.result-box {
+    width: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.vs-text {
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.game-score {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.game-date {
+    font-size: 0.9rem;
+    color: #555;
+}

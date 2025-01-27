@@ -8,7 +8,7 @@ export const Header = () => {
     return (
         <header
             style={{
-                backgroundColor: '#d31010',
+                backgroundColor: '#A50304',
                 padding: '10px 20px',
                 display: 'flex',
                 alignItems: 'center',
