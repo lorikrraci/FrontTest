@@ -63,18 +63,23 @@ html, body {
     
   .results-container {
     margin: 50px auto;
-    padding: 20px;
+    padding: 40px 20px;
+    background-color: #f0f0f0; /* Light grey background */
     max-width: 1200px;
-    text-align: center;
+    border-radius: 15px; /* Optional: Rounded corners for the section */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better separation */
 }
 
+/* Heading for the results section */
 .results-heading {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    color: #333;
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: bold;
+  color: #333; /* Text color */
+  text-align: center; /* Center-align text */
+  margin-bottom: 20px; /* Add spacing below the title */
 }
 
+/* Layout for the list of result boxes */
 .results-list {
     display: flex;
     justify-content: space-between;
@@ -82,30 +87,34 @@ html, body {
     flex-wrap: wrap;
 }
 
+/* Style for individual result boxes */
 .result-box {
     width: 300px;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white; /* White background for result boxes */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Layout for logos inside the result box */
 .logos {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
+/* Styling for team logos */
 .team-logo {
     width: 60px;
     height: 60px;
     object-fit: cover;
-    border-radius: 50%;
+    /* border-radius: 50%; Circular logos */
 }
 
+/* "VS" text between logos */
 .vs-text {
     margin: 0 15px;
     font-size: 1.2rem;
@@ -113,12 +122,44 @@ html, body {
     color: #444;
 }
 
+/* Styling for game score */
 .game-score {
     font-size: 1rem;
     margin: 10px 0;
+    font-weight: bold;
+    color: #333;
 }
 
+/* Styling for game date */
 .game-date {
     font-size: 0.9rem;
     color: #555;
+}
+/* Styling for the button */
+.results-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #A50304; /* Blue background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+.results-button:hover {
+  background-color: #000000; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+  color: #A50304;
+}
+
+/* Centering the button */
+.results-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }

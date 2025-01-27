@@ -1,32 +1,10 @@
 import React from 'react';
 import './Home.css'; 
 import MetaData from '../layout/MetaData';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-    // Sample data for the last 3 game results
-    const lastGames = [
-        {
-            team1Logo: './images/KB-Vellaznimi-logo.png',
-            team2Logo: './images/KB-Vellaznimi-logo.png',
-            opponent: 'Team A',
-            score: '89 - 76',
-            date: '2025-01-20',
-        },
-        {
-            team1Logo: './images/KB-Vellaznimi-logo.png',
-            team2Logo: './images/KB-Vellaznimi-logo.png',
-            opponent: 'Team B',
-            score: '78 - 85',
-            date: '2025-01-18',
-        },
-        {
-            team1Logo: './images/KB-Vellaznimi-logo.png',
-            team2Logo: './images/KB-Vellaznimi-logo.png',
-            opponent: 'Team C',
-            score: '92 - 88',
-            date: '2025-01-15',
-        },
-    ];
+    const navigate = useNavigate(); // For navigation to the Rezultatet page
 
     return (
         <div className="home-background">
@@ -35,24 +13,51 @@ const Home = () => {
                 <h1 className="background-text">KB Vëllaznimi</h1>
             </div>
 
+            {/* Results Section */}
             <div className="results-container">
-                <h1 className="results-heading">LAST GAMES RESULTS</h1>
+                <h1 className="results-heading">Last Games Results</h1>
                 <div className="results-list">
-                    {lastGames.map((game, index) => (
-                        <div key={index} className="result-box">
-                            <div className="logos">
-                                <img src={game.team1Logo} alt="Team 1 Logo" className="team-logo" />
-                                <span className="vs-text">VS</span>
-                                <img src={game.team2Logo} alt="Team 2 Logo" className="team-logo" />
-                            </div>
-                            <p className="game-score"><strong>Score:</strong> {game.score}</p>
-                            <p className="game-date"><strong>Date:</strong> {game.date}</p>
+                    {/* Example result boxes */}
+                    <div className="result-box">
+                        <div className="logos">
+                            <img className="team-logo" src="./images/KB-Vellaznimi-logo.png" alt="Team 1" />
+                            <span className="vs-text">VS</span>
+                            <img className="team-logo" src="./images/KB-Vellaznimi-logo.png" alt="Team 2" />
                         </div>
-                    ))}
+                        <p className="game-score">87 - 72</p>
+                        <p className="game-date">January 20, 2025</p>
+                    </div>
+                    <div className="result-box">
+                        <div className="logos">
+                            <img className="team-logo" src="./images/KB-Vellaznimi-logo.png" alt="Team 3" />
+                            <span className="vs-text">VS</span>
+                            <img className="team-logo" src="./images/KB-Vellaznimi-logo.png" alt="Team 4" />
+                        </div>
+                        <p className="game-score">95 - 89</p>
+                        <p className="game-date">January 18, 2025</p>
+                    </div>
+                    <div className="result-box">
+                        <div className="logos">
+                            <img className="team-logo" src="./images/KB-Vellaznimi-logo.png" alt="Team 5" />
+                            <span className="vs-text">VS</span>
+                            <img className="team-logo" src="./images/KB-Vellaznimi-logo.png" alt="Team 6" />
+                        </div>
+                        <p className="game-score">78 - 82</p>
+                        <p className="game-date">January 15, 2025</p>
+                    </div>
+                </div>
+
+                {/* Button to navigate to Rezultatet */}
+                <div className="results-button-container">
+                    <button
+                        className="results-button"
+                        onClick={() => navigate('/rezultatet')}
+                    >
+                        Shiko te gjitha rezultatet
+                    </button>
                 </div>
             </div>
         </div>
     );
 };
-
 export default Home;
