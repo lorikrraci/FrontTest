@@ -9,41 +9,53 @@ const Home = () => {
     const topPerformers = [
         { 
             title: 'Best Overall Stats', 
-            name: 'John Doe', 
+            name: 'Lorik Rraci', 
             position: 'Forward', 
-            stat: '25.4 PPG', 
-            image: '/path-to-image/john-doe.jpg' 
+            stat: '40 Index Per Game', 
+            image: '' 
         },
         { 
             title: 'Most Points Per Game', 
-            name: 'Jane Smith', 
+            name: 'Alb Zhubi', 
             position: 'Guard', 
             stat: '20.3 PPG', 
-            image: '/path-to-image/jane-smith.jpg' 
+            image: '' 
         },
         { 
             title: 'Most Assists Per Game', 
-            name: 'Chris Evans', 
+            name: 'Arb Sahatqija', 
             position: 'Point Guard', 
             stat: '8.7 APG', 
-            image: '/path-to-image/chris-evans.jpg' 
+            image: '' 
         },
         { 
             title: 'Most Rebounds Per Game', 
-            name: 'Alex Johnson', 
+            name: 'Ledion Kurhasku', 
             position: 'Center', 
             stat: '12.4 RPG', 
-            image: '/path-to-image/alex-johnson.jpg' 
+            image: '' 
         },
         { 
             title: 'Most Blocks Per Game', 
-            name: 'Emily Davis', 
+            name: 'Art Pozhegu', 
             position: 'Power Forward', 
             stat: '3.2 BPG', 
-            image: '/path-to-image/emily-davis.jpg' 
+            image: '' 
         }
     ];
     
+    const teamStanding = {
+        position: 1,
+        teamName: "KB Vëllaznimi",
+        matchesPlayed: 20,
+        wins: 15,
+        losses: 5,
+        scored: 1050,
+        conceded: 950,
+        goalDifference: 100,
+        points: 45,
+    };
+
     return (
         <div className="home-background">
             <MetaData title={'KB Vëllaznimi'} />
@@ -111,10 +123,52 @@ const Home = () => {
                 </div>
                 <button 
                     className="squad-button" 
-                    onClick={() => (window.location.href = '/klubi')}
+                    onClick={() => (window.location.href = '/aboutUs')}
                 >
                     Squad
                 </button>
+            </div>
+             {/* Team Standing Section */}
+             <div className="team-standing-section">
+                <h2 className="team-standing-heading">STANDINGS</h2>
+                <table className="team-standing-table">
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Ekipi</th>
+                            <th>Ndeshjet</th>
+                            <th>Fitoret</th>
+                            <th>Humbjet</th>
+                            <th>Shënuara</th>
+                            <th>Pranuara</th>
+                            <th>Kosh Diferenca</th>
+                            <th>Pikët</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{teamStanding.position}</td>
+                            <td>{teamStanding.teamName}</td>
+                            <td>{teamStanding.matchesPlayed}</td>
+                            <td>{teamStanding.wins}</td>
+                            <td>{teamStanding.losses}</td>
+                            <td>{teamStanding.scored}</td>
+                            <td>{teamStanding.conceded}</td>
+                            <td>{teamStanding.goalDifference}</td>
+                            <td>{teamStanding.points}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                {/* Button to navigate to Stats page */}
+                <div className="team-standing-button-container">
+                    <button
+                        className="team-standing-button"
+                        onClick={() => navigate('/stats')}
+                    >
+                        Full Table
+                    </button>
+                </div>
             </div>
         </div>
     );
