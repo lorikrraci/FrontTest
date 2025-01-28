@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import Loader from '../layout/Loader';
 import MetaData from '../layout/MetaData';
 import { login, clearErrors } from '../../actions/userActions';
+import './Login.css';
 
-const Login = ({ history }) => {
+const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -22,7 +23,7 @@ const Login = ({ history }) => {
         if (error) {
             dispatch(clearErrors());
         }
-    }, [dispatch, isAuthenticated, error, history]);
+    }, [dispatch, isAuthenticated, error, navigate]);
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -36,21 +37,12 @@ const Login = ({ history }) => {
             ) : (
                 <Fragment>
                     <MetaData title={'Login'} />
-                    <div
-                        className="row wrapper"
-                        style={{
-                            backgroundImage: "src=./images/KB-Vellaznimi-logo.png" ,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            height: '100vh',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                        }}
-                    >
-                        <div className="col-10 col-lg-5">
-                            <form className="shadow-lg" onSubmit={submitHandler}>
-                                <h1 className="mb-3">Login</h1>
+                    <div className="login-container">
+                        <div className="logo-overlay"></div>
+                        <div className="login-wrapper">
+                            <form className="login-form" onSubmit={submitHandler}>
+                                <h2 className="login-title">Welcome Back!</h2>
+
                                 <div className="form-group">
                                     <label htmlFor="email_field">Email</label>
                                     <input
@@ -73,25 +65,19 @@ const Login = ({ history }) => {
                                     />
                                 </div>
 
-                                <Link to="/password/forgot" className="float-right mb-4">
+                                <Link to="/password/forgot" className="forgot-password-link">
                                     Forgot Password?
                                 </Link>
 
                                 <button
                                     id="login_button"
                                     type="submit"
-                                    className="btn btn-block py-3"
-                                    style={{
-                                        backgroundColor: '#e11b22',
-                                        color: '#fff',
-                                        border: 'none',
-                                        fontWeight: 'bold',
-                                    }}
+                                    className="login-button"
                                 >
                                     LOGIN
                                 </button>
 
-                                <Link to="/register" className="float-right mt-3">
+                                <Link to="/register" className="new-user-link">
                                     New User?
                                 </Link>
                             </form>
