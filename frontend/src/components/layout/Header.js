@@ -1,4 +1,5 @@
 import React from 'react';
+// import './Stats.css'; 
 import { Link, useLocation } from 'react-router-dom';
 import Search from './Search';
 

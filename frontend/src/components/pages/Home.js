@@ -52,7 +52,11 @@ const Home = () => {
         losses: 9,
         scored: 1452,
         conceded: 1451,
+<<<<<<< HEAD
         basketDifference: 1,
+=======
+        goalDifference: 1,
+>>>>>>> 9ed2dd26e40e636c817a4f6f7ce16dbf11b82a59
         points: 29,
     };
 
@@ -128,6 +132,7 @@ const Home = () => {
                     Squad
                 </button>
             </div>
+            <br></br><br></br>
              {/* Team Standing Section */}
                         <div className="team-standing-section">
                 <div className="team-standing-content">
