@@ -129,45 +129,47 @@ const Home = () => {
                 </button>
             </div>
              {/* Team Standing Section */}
-             <div className="team-standing-section">
-                <h2 className="team-standing-heading">TEAM STANDING</h2>
-                <table className="team-standing-table">
-                    <thead>
-                        <tr>
-                            <th>Position</th>
-                            <th>Ekipi</th>
-                            <th>Ndeshjet</th>
-                            <th>Fitoret</th>
-                            <th>Humbjet</th>
-                            <th>Shënuara</th>
-                            <th>Pranuara</th>
-                            <th>Kosh Diferenca</th>
-                            <th>Pikët</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{teamStanding.position}</td>
-                            <td>{teamStanding.teamName}</td>
-                            <td>{teamStanding.matchesPlayed}</td>
-                            <td>{teamStanding.wins}</td>
-                            <td>{teamStanding.losses}</td>
-                            <td>{teamStanding.scored}</td>
-                            <td>{teamStanding.conceded}</td>
-                            <td>{teamStanding.goalDifference}</td>
-                            <td>{teamStanding.points}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                        <div className="team-standing-section">
+                <div className="team-standing-content">
+                    <h2 className="team-standing-heading">TEAM STANDING</h2>
+                    <table className="team-standing-table">
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th>Ekipi</th>
+                                <th>Ndeshjet</th>
+                                <th>Fitoret</th>
+                                <th>Humbjet</th>
+                                <th>Shënuara</th>
+                                <th>Pranuara</th>
+                                <th>Kosh Diferenca</th>
+                                <th>Pikët</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{teamStanding.position}</td>
+                                <td>{teamStanding.teamName}</td>
+                                <td>{teamStanding.matchesPlayed}</td>
+                                <td>{teamStanding.wins}</td>
+                                <td>{teamStanding.losses}</td>
+                                <td>{teamStanding.scored}</td>
+                                <td>{teamStanding.conceded}</td>
+                                <td>{teamStanding.goalDifference}</td>
+                                <td>{teamStanding.points}</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                {/* Button to navigate to Stats page */}
-                <div className="team-standing-button-container">
-                    <button
-                        className="team-standing-button"
-                        onClick={() => navigate('/stats')}
-                    >
-                        Full Table
-                    </button>
+                    {/* Button to navigate to Stats page */}
+                    <div className="team-standing-button-container">
+                        <button
+                            className="team-standing-button"
+                            onClick={() => navigate('/stats')}
+                        >
+                            Full Table
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

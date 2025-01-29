@@ -169,7 +169,7 @@ html, body {
   margin-top: 2rem;
   padding: 1rem;
   background-color: #A50304; /* Red background for the performers section */
-  border-radius: 8px;
+  /* border-radius: 8px; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -256,11 +256,22 @@ html, body {
 
 /* Team Standing Section */
 .team-standing-section {
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   padding: 1rem;
   background-color: #000; /* Black background for the table div */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  width: 100vw; /* Make it span the full width of the viewport */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.team-standing-content {
+  max-width: 1200px; /* Adjust to your preferred max width */
+  margin: 0 auto; /* Centers the content inside the full-width div */
+  padding: 1rem;
 }
 
 .team-standing-heading {
@@ -277,17 +288,17 @@ html, body {
   margin-bottom: 1rem;
 }
 
-/* Header Row (red background and white text) */
+/* Header Row */
 .team-standing-table th {
   padding: 0.8rem;
   text-align: center;
   border: 1px solid #ddd;
-  background-color: #d32f2f; /* Red background */
+  background-color: #A50304; /* Red background */
   color: white; /* White text */
   font-weight: bold;
 }
 
-/* Data Rows Styling */
+/* Data Rows */
 .team-standing-table td {
   padding: 0.8rem;
   text-align: center;
@@ -301,7 +312,7 @@ html, body {
 }
 
 .team-standing-button {
-  background-color: #d32f2f;
+  background-color: #A50304;
   color: white;
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
