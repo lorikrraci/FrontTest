@@ -45,15 +45,15 @@ const Home = () => {
     ];
     
     const teamStanding = {
-        position: 1,
+        position: 5,
         teamName: "KB Vëllaznimi",
-        matchesPlayed: 20,
-        wins: 15,
-        losses: 5,
-        scored: 1050,
-        conceded: 950,
-        goalDifference: 100,
-        points: 45,
+        matchesPlayed: 19,
+        wins: 10,
+        losses: 9,
+        scored: 1452,
+        conceded: 1451,
+        goalDifference: 1,
+        points: 29,
     };
 
     return (
@@ -128,6 +128,7 @@ const Home = () => {
                     Squad
                 </button>
             </div>
+            <br></br><br></br>
              {/* Team Standing Section */}
                         <div className="team-standing-section">
                 <div className="team-standing-content">
