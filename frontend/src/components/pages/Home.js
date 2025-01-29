@@ -173,7 +173,33 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            
+            {/* STORE SECTION */}
+            <div className="store-section">
+                <h2 className="store-title">STORE</h2>
+
+                {/* First card - Slider */}
+                <div className="store-card store-slider">
+                    <p>Slider showcasing 3 store items</p>
+                </div>
+
+                {/* Second and Third Cards */}
+                <div className="store-small-cards">
+                    <div className="store-card store-small">
+                        <p>Marketing for Store - Offer 1</p>
+                    </div>
+                    <div className="store-card store-small">
+                        <p>Marketing for Store - Offer 2</p>
+                    </div>
+                </div>
+
+                {/* "All Products" Button */}
+                <button 
+                    className="store-button" 
+                    onClick={() => navigate('/store')}
+                >
+                    All Products
+                </button>
+            </div>
         </div>
     );
 };

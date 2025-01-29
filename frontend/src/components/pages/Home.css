@@ -326,3 +326,63 @@ html, body {
   background-color: #b71c1c; /* Darker red on hover */
 }
 
+/* STORE SECTION */
+.store-section {
+  width: 80%;
+  margin: 50px auto;
+  background-color: #f5f5f5;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.store-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #A50304;
+}
+
+.store-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* First Card - Slider */
+.store-slider {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Small Cards */
+.store-small-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.store-small {
+  width: 45%;
+  height: 120px;
+}
+
+/* Button */
+.store-button {
+  background-color: #d32f2f;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.store-button:hover {
+  background-color: #b71c1c;
+}
