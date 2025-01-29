@@ -52,11 +52,7 @@ const Home = () => {
         losses: 9,
         scored: 1452,
         conceded: 1451,
-<<<<<<< HEAD
         basketDifference: 1,
-=======
-        goalDifference: 1,
->>>>>>> 9ed2dd26e40e636c817a4f6f7ce16dbf11b82a59
         points: 29,
     };
 

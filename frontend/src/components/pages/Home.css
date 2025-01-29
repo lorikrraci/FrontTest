@@ -7,7 +7,7 @@ html, body {
 }
 
 .home-background {
-    height: 280vh;
+    height: 320vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
