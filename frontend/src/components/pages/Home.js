@@ -45,15 +45,15 @@ const Home = () => {
     ];
     
     const teamStanding = {
-        position: 1,
+        position: 5,
         teamName: "KB Vëllaznimi",
-        matchesPlayed: 20,
-        wins: 15,
-        losses: 5,
-        scored: 1050,
-        conceded: 950,
-        goalDifference: 100,
-        points: 45,
+        matchesPlayed: 19,
+        wins: 10,
+        losses: 9,
+        scored: 1452,
+        conceded: 1451,
+        basketDifference: 1,
+        points: 29,
     };
 
     return (
@@ -155,7 +155,7 @@ const Home = () => {
                                 <td>{teamStanding.losses}</td>
                                 <td>{teamStanding.scored}</td>
                                 <td>{teamStanding.conceded}</td>
-                                <td>{teamStanding.goalDifference}</td>
+                                <td>{teamStanding.basketDifference}</td>
                                 <td>{teamStanding.points}</td>
                             </tr>
                         </tbody>
@@ -172,6 +172,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 };
