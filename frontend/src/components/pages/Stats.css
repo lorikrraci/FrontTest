@@ -102,3 +102,39 @@
   color: #333;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #a50000; /* Ngjyra e kuqe e përdorur në dizajn */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: #8b0000; /* Një nuancë më e errët për efekt hover */
+  transform: scale(1.05);
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pagination span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
